@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ghibli Monk - Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="pane" id="home-pane">
+    <header class="header">
+      <h1>Ghibli Monk</h1>
+    </header>
+    <div class="cards-container">
+      <div class="card" onclick="navigate('Life')">
+        <img src="images/life.png" alt="Life">
+        <div class="card-title">Life</div>
+      </div>
+      <div class="card" onclick="navigate('Vacations')">
+        <img src="images/vacations.png" alt="Vacations">
+        <div class="card-title">Vacations</div>
+      </div>
+      <div class="card" onclick="navigate('Originals')">
+        <img src="images/originals.jpg" alt="Originals">
+        <div class="card-title">Originals</div>
+      </div>
+      <div class="card" onclick="navigate('Recommendations')">
+        <img src="images/recommendations.jpg" alt="Recommendations">
+        <div class="card-title">Recommendations</div>
+      </div>
+    </div>
+    <footer>
+      <a href="login.html">Admin Login</a>
+    </footer>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
