@@ -7,7 +7,19 @@ const fsPromises = fs.promises;
 const session = require('express-session');
 const app = express();
 
+const uploadsDir = path.join(__dirname, 'uploads');
+// Ensure the "uploads" folder exists
+if (!fs.existsSync(uploadsDir)) {
+  fs.mkdirSync(uploadsDir);
+}
+
 const dbFile = path.join(__dirname, 'db.json');
+
+// ... (rest of your server.js remains unchanged)
+
+
+
+
 
 // Helper functions to read/write the JSON database
 async function readDatabase() {

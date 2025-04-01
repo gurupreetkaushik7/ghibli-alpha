@@ -133,7 +133,13 @@ function uploadImage() {
       .then(res => res.json())
       .then(data => {
         if (data.success) {
-          renderGallery();
+          console.log("Uploaded files:", data.files);
+          // Wait 500ms before re-rendering the gallery to allow file writes to complete
+          setTimeout(() => {
+            renderGallery();
+          }, 500);
+        } else {
+          console.error("Upload failed:", data.message);
         }
       })
       .catch(err => console.error(err));
